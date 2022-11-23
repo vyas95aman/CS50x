@@ -1,0 +1,27 @@
+{% extends "layout.html" %} 
+
+{% block body %} 
+
+    <!-- <h1>Register</h1>
+    <form action="/register" method="post">
+        <input autocompete="off" autofocus name="name" placeholder="Name" type="text">
+        <select name="sport">
+            <option disable selected>Sport</option> <! Creates a placeholder in dropdown -->
+            <!-- {% for sport in sports %} 
+                <option>{{ sport }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Register">
+    </form>  -->
+
+    <h1>Register</h1>
+    <form action="/register" method="post">
+        <input autocompete="off" autofocus name="name" placeholder="Name" type="text">
+        {% for sport in sports %} 
+            <input name="sport" type="radio" value="{{ sport }}"> {{ sport }} <!-- Now we get a checkbox for options, checkbox or radio (exclusive) -->
+        {% endfor %}
+        <input type="submit" value="Register">
+    </form>
+
+
+{% endblock %}

@@ -1,0 +1,5 @@
+First make the machine code file:
+make xy
+
+Then run:
+./xyz

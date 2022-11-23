@@ -1,0 +1,33 @@
+sort1 uses: bubble
+
+How do you know?:
+This algorithm took the least amount of time on the sorted dataset. Since it only compared n and n+1, this was the fasted method for an already sorted dataset. Omega of n.
+
+
+sort2 uses: merge
+
+How do you know?:
+
+Sort2 consistently took the shortest amount of time. Especially with the random dataset, it had the most efficient algorithm, indicating it was the fastest of the three with random data - merge sort.
+
+sort3 uses: selection
+
+How do you know?:
+
+The algorithm worked worst in an already sorted dataset. This is because even if the data is already sorted, the algorithm for selection sort has to iterate through each value anyway, making it take longer than the other methods. This algorithm also performed second best with randomized data. Merge being the fastest, and bubble being the slowest.
+
+
+
+
+time for sort1 on reversed50000.txt: 5.391s - takes longest time bc 1 has to go from n[50000] to n[0]
+time for sort2 on reversed50000.txt: 0.745s - merge
+time for sort3 on reversed50000.txt: 3.223s
+
+
+time for sort1 on random50000.txt: 7.306s - bubble
+time for sort2 on random50000.txt: 0.461s - its merge
+time for sort3 on random50000.txt: 3.109s - selection
+
+time for sort1 on sorted5000.txt: 0.474s - bubble, its already sorted
+time for sort2 on sorted5000.txt: 0.574s - consistently shortest time, merge!
+time for sort3 on sorted5000.txt: 3.181s - selection, bc it has to iterate for all values - takes longest time in a sorted data

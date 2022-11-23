@@ -1,0 +1,7 @@
+curl -I -X GET http://harvard.edu #curl is Connecting to URL, only shows headers
+curl -I -X GET https://www.harvard.edu # gives 200 OK, this is good
+curl -I -X GET https://www.harvard.edu/filedoesnotexist # gives error 404 - file does not exist! bc file does not exist...
+
+curl -I -X GET http://safetyschool.org # just redirects to new location - yale.edu, websites only function 
+
+
