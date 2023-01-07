@@ -2,7 +2,7 @@
 // This is a webpage that demonstrates how sorting algorithms work. This javascript page is outlined with variables, functions, actions and the algorithms that make this happen. Upon loading the site, the page will auto load a new array, and the buttons/sliders and selector on the page will allow the user to select different variables and execute the sorting algorithm. The user inputs will not be accessible during sorting.
 
 
-//                                                  VARIABLES                                                            //
+// VARIABLES
 
 let arraysize = document.querySelector("#arraysize").value;
 let algorithm = document.querySelector("#algorithm").value;
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     generateNewArray();
     });
 
-//                                                     USER ACTIONS                                                             //
+// USER ACTIONS
 
 generateNewArrayBtn.onclick = function(e) {
     generateNewArray();
@@ -85,7 +85,7 @@ visualizeBtn.onclick = (e) => {
 }
 
 
-//                                                   FUNCTIONS                                                              //
+// FUNCTIONS
 
 function generateNewArray() {
     arrayContainer.innerHTML = ""; // Clears current graph
@@ -125,7 +125,7 @@ function sleep(ms) {
 }
 
 
-//                                                SORTING ALGORITHMS                                                          //
+// SORTING ALGORITHMS
 // Source: https://www.freecodecamp.org/news/sorting-algorithms-explained-with-examples-in-python-java-and-c/
 
 // SWAP FUNCTION
@@ -210,10 +210,6 @@ async function insertionsort(array) {
 }
 
 // MERGE SORT
-// Doing this sixth time... maybe come back to this and try using indexes as iterables instead of array so that way it tracks on graph where to make swaps - doesnt look right but works correctly
-// Right now this method swaps array bars from index and value
-
-// implement w indexes? try to pass indexes in the mergesort function, maybe this can maintain the indexes better
 async function mergesort(arr) {
     if (arr.length < 2) {
       return arr;
@@ -244,10 +240,6 @@ async function mergesort(arr) {
         }
         // Visualize 
         bar[k].style.backgroundColor = "yellow";
-        // if (k + arr.length < bar.length) {
-            // console.log(arr[k] * heightfactor);
-            // bar[k + arr.length].style.backgroundColor = "yellow";
-        // }
         await sleep(speed);
         k++;
     }
@@ -277,7 +269,6 @@ async function mergesort(arr) {
     if (isSorted(array) == true) reset();
 }
 
-// Find and replace current index with index of input, passing an index and a value
 function find_and_swap(k, x) {
     index_a = k; // current index
     index_b = 0;
@@ -367,7 +358,6 @@ async function partition(array, start, end) {
     return i + 1;
 }
 
-// Returns true if function is sorted in ascending order
 function isSorted(array) {
     let previousNo = null;
     for (const number of array) {
